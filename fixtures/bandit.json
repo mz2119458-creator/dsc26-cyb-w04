@@ -1,0 +1,14 @@
+{
+  "results": [
+    {
+      "test_id": "B105",
+      "filename": "diwan_invoicing/invoicing/settings.py",
+      "line_number": 15,
+      "issue_text": "Hardcoded password string found.",
+      "issue_severity": "HIGH",
+      "issue_confidence": "HIGH",
+      "issue_cwe": { "id": 259 },
+      "code": "15    PASSWORD = \"secret123\""
+    }
+  ]
+}

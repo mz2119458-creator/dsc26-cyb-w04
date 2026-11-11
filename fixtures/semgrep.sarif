@@ -1,0 +1,35 @@
+{
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "semgrep",
+          "rules": [
+            {
+              "id": "python.lang.security.audit.exec-detected.exec-detected",
+              "properties": {
+                "security-severity": "7.5",
+                "tags": ["CWE-78"]
+              },
+              "defaultConfiguration": { "level": "error" }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "python.lang.security.audit.exec-detected.exec-detected",
+          "message": { "text": "Detected use of exec()." },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": { "uri": "diwan_invoicing/invoicing/web.py" },
+                "region": { "startLine": 42, "snippet": { "text": "exec(user_input)" } }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
